@@ -1,9 +1,9 @@
-# anystep-gradient-descent
-A repository to catalogue studying and experimentation on large-step Gradient Descent.
+# Sharpness and Large Step in Gradient Descent
+A repository to catalogue studying and experimentation on EoS, Sharpness and large-step Gradient Descent.
 
-Based on *Any-stepsize Gradient Descent for Separable Data under Fenchel-Young Losses* by Bao et al. (https://arxiv.org/abs/2502.04889), and *Large Stepsize Gradient Descent for Logistic Loss: Non-Monotonicity of the Loss Improves Optimization Efficiency* by Wu et al. (https://arxiv.org/abs/2402.15926).
+Based on *Any-stepsize Gradient Descent for Separable Data under Fenchel-Young Losses* by Bao et al. (https://arxiv.org/abs/2502.04889), *Large Stepsize Gradient Descent for Logistic Loss: Non-Monotonicity of the Loss Improves Optimization Efficiency* by Wu et al. (https://arxiv.org/abs/2402.15926), and "Flatland: The Adventures of Gradient Descent with Large Step Sizes" by Galli et al. (https://arxiv.org/abs/2606.06722).
 
-## Introduction
+## 1. Large Step under Logistic Regression
 
 We're studying the behavior of large step-sizes on Gradient Descent (GD), one of the most common optimizers in Machine Learning. 
 
