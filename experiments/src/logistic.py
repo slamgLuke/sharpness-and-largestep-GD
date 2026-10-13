@@ -20,23 +20,19 @@ def gd(loss_and_mu, eta, T):
     return np.array(L)
 
 
-losses = {
-    "logistic": logistic,
-}
 T = 2**20
 t = np.arange(1, T + 1)
 
 # ~4x the area of the previous 16 x 3.5 figure
 fig, ax = plt.subplots(figsize=(20, 11))
-for name, f in losses.items():
-    for k in range(6):
-        L = gd(f, 2**k, T)
-        L[L < 1e-25] = np.nan
-        ax.plot(t, L, label=rf"$\eta = 2^{k}$")
-    ax.set(title=name, xlabel="t", ylabel=r"$L(w_t)$")
-    ax.set_xscale("log", base=2)
-    ax.set_yscale("log", base=2)
-    ax.set_ylim(2**-21, 2**5)
+for k in range(6):
+    L = gd(logistic, 2**k, T)
+    L[L < 1e-25] = np.nan
+    ax.plot(t, L, label=rf"$\eta = 2^{k}$")
+ax.set(title="logistic", xlabel="t", ylabel=r"$L(w_t)$")
+ax.set_xscale("log", base=2)
+ax.set_yscale("log", base=2)
+ax.set_ylim(2**-21, 2**5)
 ax.legend()
 
 plt.tight_layout()
